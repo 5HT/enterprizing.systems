@@ -1073,7 +1073,7 @@ code, div.lstlisting { font-size:11pt; margin: 0px 0px 30px -10px;
 code, div.lstlisting .keyword              { font-weight: bold }
 code, div.lstlisting .string, code .regexp { color: green }
 code, div.lstlisting .class { color: darkblue }
-code, div.lstlisting .record { color: purple }
+code, div.lstlisting .record { color: darkred }
 code, div.lstlisting .special { color: royalblue }
-code, div.lstlisting .number               { color: pink }
+code, div.lstlisting .number               { color: red }
 code, div.lstlisting .comment              { color: grey }

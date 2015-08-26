@@ -23,9 +23,9 @@
 <li class="first download outline-btn"><a href="/downloads.html">Download</a></li> 
 <li class="github outline-btn"><a href="https://github.com/hashicorp/consul">Github</a></li>
  </ul--> <ul class="main-links nav navbar-nav navbar-right rls-xb"> 
-<li class=li-under><a  style="font-size:12pt;" href="http://voxoz.com">Voxoz</a></li> 
-<li class="first li-under"> <a style="font-size:12pt;" href="https://synrc.com">AppStack</a></li> 
-<li class=li-under><a style="font-size:12pt;" href="http://spawnproc.com">SpawnProc</a></li> </ul> 
+<li class=li-under><a  style="font-size:12pt;" href="http://voxoz.com">voxoz</a></li> 
+<li class="first li-under"> <a style="font-size:12pt;" href="https://synrc.com">synrc</a></li> 
+<li class=li-under><a style="font-size:12pt;" href="http://spawnproc.com">spawnproc</a></li> </ul> 
 </nav> 
 
 </div> 
@@ -35,8 +35,8 @@
 <div id="jumbotron"> 
 <div class=container> 
   <div class="col-lg-7 col-md-7"> 
-  <h2 class="rls-l">Distributed, fault tolerant, network split resistant,
-                 performance, transactional business processing system.</h2> 
+  <h2 class="rls-l">Distributed, fault tolerant, network-split resistant,
+                 performant, transactional intermediary processing.</h2> 
   </div> 
   <div class="jumbo-logo-wrap col-lg-offset-1 col-lg-5 col-md-6 hidden-xs hidden-sm"> 
     <div class=jumbo-logo>
@@ -57,9 +57,10 @@
   </div> 
   <div class="col-lg-9 col-md-9">
   <h1><a href="https://synrc.com/apps/upl/doc/web/index.htm">Financial Language</a></h1>
-  <p> We has English-like transaction processing stric language
-      that allow to define transactional debit and credit programs in a safe and 
-      well defined manner. It covers </p> 
+  <p>
+  <p> The foundation of Spawnproc is strictly typed banking specific programming language,
+      which has loans/deposits, cashbacks, grace periods as its primitives,
+      all defined in clean manner.</p> 
   </div> 
 </div> 
 </div>
@@ -71,9 +72,9 @@
   </div> 
   <div class="col-lg-9 col-md-9">
   <h1>Ontological Model</h1>
-  <p> We define data model from the ground up to avoid problems in future.
+  <p> We define data model from the ground up.
       In top-level metainformation you are able to define rules
-      for storing, displaying and treating the tuples.</p> 
+      for storing, displaying and handling the documents and other data.</p> 
   </div> 
 </div> 
 </div>
@@ -85,8 +86,9 @@
   </div> 
   <div class="col-lg-9 col-md-9">
   <h1>Typed Schema</h1> 
-  <p> Schema definition for various database backends: Mnesia,
-      Riak and KAI; is generated from top-level metainformation and strictly defines JSON/XML and other format entities.</p> 
+  <p> Spawnproc works with a range of database backends:
+      Mnesia, Riak and KAI. The data scheme is automatically kept in sync 
+      with the ontological model.</p>
   </div> 
 </div> 
 </div>
@@ -113,9 +115,9 @@
   </div> 
   <div class="col-lg-9 col-md-9">
   <h1>Workflow Engine</h1> 
-  <p> Define your business logic compatible with
-      workflow vendors and understandable by
-      system analytics.</p> 
+  <p> The engine defines business flows according to industry standards.
+      Each flow is accompanied by all relevant documents,
+      such as approval forms, sing-off sheets, legal agreements.</p> 
   </div> 
 </div> 
 </div>
@@ -134,7 +136,7 @@
 </div> 
 </div>
 
-<div class="col-lg-6 col-md-6"> 
+<!--div class="col-lg-6 col-md-6"> 
 <div class=row> 
   <div class="col-lg-2 col-md-2"> 
   <span class="icn discovery"></span> 
@@ -145,7 +147,7 @@
       analysis and complex audit reporting.</p> 
   </div> 
 </div> 
-</div>
+</div-->
 
 <div class="col-lg-6 col-md-6"> 
 <div class=row> 
@@ -154,10 +156,10 @@
   </div> 
   <div class="col-lg-9 col-md-9">
   <h1>Unified Messaging</h1> 
-  <p> SpawnProc is Message Bus and Message Format agnostic.
-      We provide libraries for AMQP, MQTT and other pub/sub providers.
-      Our messaging relay N2O supports number of transports:
-      JSON, Binary, XML, TXT; and could be plugged directly to WebSockets front-end.</p> 
+  <p> Spawnproc supports a range of message buses,
+      including AMQP and MQTT.
+      Our messaging relay terminates the message
+      flow using JSON, Binary, XML and TXT formatters.</p> 
   </div> 
 </div> 
 </div>
@@ -185,23 +187,59 @@
   <span class="icn discovery"></span> 
   </div> 
   <div class="col-xs-10 col-lg-10 explantion">
-    <h2>  &nbsp;&nbsp; Banking Credit Card Processing Language</h2>
+    <h2> <a name=swap>  &nbsp;&nbsp; Stub Amortising Swap Derivative</a></h2>
      <div class="lstlisting">
-    card M-PLA-CB UAH
+    instrument 'Stub_Amort_Swap'
+    parties name DB id PARTYAUS33 trade DB-0001
+            name Barclays id BARCGB2L trade SW2000
+
+    stream pay Barclays rate 'EUR-LIBOR-BBA' monthly 6 of
+           notional range 06/14/1995 50000000
+                          12/14/1995 40000000
+                          12/14/1996 30000000
+                          12/14/1997 20000000
+                          12/14/1998 10000000
+           from 01/16/1995 to 12/14/1999 adjust NONE, MODFOLLOWING
+           starting 06/14/1995
+           recalculate monthly 6 roll 14
+           reset 2 business days before monthly 6 adjust MODFOLLOWING
+           initial stub interpolate rate from 4 months to 5 months
+           fraction 'ACT/360'
+           calendar GBLO
+
+    stream pay DB rate 6% annual of
+           notional range 06/14/1995 50000000
+                          12/14/1995 40000000
+                          12/14/1996 30000000
+                          12/14/1997 20000000
+                          12/14/1998 10000000
+           starting 12/14/1995
+           recalculate annual roll 14
+           calendar DEFR
+           fraction '30E/360'
+     </div>
+  </div>
+
+  <div class="col-lg-2 col-md-2"> 
+  <span class="icn discovery"></span> 
+  </div> 
+  <div class="col-xs-10 col-lg-10 explantion">
+    <h2>  &nbsp;&nbsp; Banking Credit Card Program</h2>
+     <div class="lstlisting">
+    program 'M-PLA-CB' 'UAH'
     limit unknown
-    grace-period first 100 days then 60 days
+    grace 60 days
     penalty daily 100
-            month add-rate 5%
     currency convert 1%
-    rate month 4.9% of credit
-    fee month 12 once on initial-payment
-        month 3% of debt limit min 50 max debt
-        month 1.2% of debt
-        month 24
+    rate monthly 4.9% of credit
+    fee monthly 12 once on init
+        monthly 3% of debt limit min 50 max debt
+        monthly 1.2% of debt
+        monthly 24
         status disabled 10
         transaction cashin  0
-                    cashout pos ATMOSPHERA 0
-                    cashout contry UA 5 + 1.5%
+                    cashout pos 'ATMOSPHERA' 0
+                    cashout country 'UA' 5 + 1.5%
                                     _ 30 + 1%
                     wire target local 0
                     wire 0.5% of amount limit min 5 max 500
@@ -218,35 +256,58 @@
   <span class="icn discovery"></span> 
   </div> 
 <div class="col-xs-10 col-lg-10 explantion">
-    <h2>  &nbsp;&nbsp; Workflow Definition in Erlang</h2>
+    <h2>  &nbsp;&nbsp; Open Application Converted BPMN 2.0 Workflow</h2>
      <div class="lstlisting">
-    #process{name = 'Wire Transfer',
-        stages = [ #stage { name = 'Request',
-                            roles = [department],
-                            transitions = ['Approve'],
-                            action = { wt, request,
-                                       ['WireTransferReq',
-                                        {'Invoice',optional},
-                                        {'Voucher',optional}]}},
+  deposit_app() ->
 
-                   #stage { name = 'Approve',
-                            roles = [disbursement],
-                            transitions = ['Request','Process','Payroll'],
-                            action = {wt,approve,['Signature']}},
-                   #stage { name = 'Payroll',
-                            roles = [payroll],
-                            transitions = ['Process'],
-                            action = {wt,payroll,['TaxIssue']}},
-                   #stage { name = 'Process',
-                            roles = [disbursement],
-                            transitions = ['Notify'],
-                            action = {wt,process,['WireTransaction']}},
-                   #stage { name = 'Notify',
-                            roles = [disbursement],
-                            transitions = [],
-                            action = {wt,notify,['Log']}}],
-         rules = []}
+    #process { name = 'Create Deposit Account',
 
+        flows = [
+            #sequenceFlow{source='Init',      target='Payment'},
+            #sequenceFlow{source='Payment',   target='Signatory'},
+            #sequenceFlow{source='Payment',   target='Process'},
+            #sequenceFlow{source='Process',   target='Final'},
+            #sequenceFlow{source='Signatory', target='Process'},
+            #sequenceFlow{source='Signatory', target='Final'}
+        ],
+
+        tasks = [
+            #userTask    { name='Init',      module = deposit },
+            #userTask    { name='Signatory', module = deposit},
+            #serviceTask { name='Payment',   module = deposit},
+            #serviceTask { name='Process',   module = deposit},
+            #endEvent    { name='Final'}
+        ],
+
+        beginEvent = 'Init',
+        endEvent = 'Final',
+        events = [
+             #messageEvent{name="PaymentReceived"}
+        ]
+    }.
+</div></div>
+
+  <div class="col-lg-2 col-md-2"> 
+  <span class="icn discovery"></span> 
+  </div> 
+<div class="col-xs-10 col-lg-10 explantion">
+    <h2>  &nbsp;&nbsp; One-Time Password Converted X-Form</h2>
+     <div class="lstlisting">
+  document(Name,Phone) ->
+                #document { name = Name,
+
+    sections =[ #section  { name= [<<"Input OTP sent to ">>,
+                            wf:to_list(Phone#phone.number)] } ],
+
+    buttons  =[ #button   { name='decline', title = <<"Cancel">>, class=cancel,
+                            postback={'CloseOpenedForm', Name} },
+
+                #button   { name='next', title = <<"Continue">>, class=[button,green],
+                            postback={'Spinner', {'OpenForm',Name}},
+                            sources=[otp] } ],
+
+    fields   =[ #field    { name='otp', type=otp, title= <<"Password">>, 
+                            labelClass=label, fieldClass=column3} ] }.
 </div></div>
 
   <div class="col-lg-2 col-md-2"> 
@@ -313,7 +374,7 @@
 <script src="assets/js/jq.js"></script> 
 <script src="assets/js/bt.js"></script> 
 <script src="assets/js/site.js"></script> 
-<script type="text/javascript" src="https://synrc.com/hi.js"></script>
+<script type="text/javascript" src="hi.js"></script>
 <script>
         APP.initialize();
 </script> </body> </html>
