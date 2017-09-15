@@ -31,7 +31,7 @@ form#quote .box.upload{position:relative;margin-top:25px;margin-bottom:45px;}
 form#quote .box.checkbank{position:relative;margin-bottom:10px}
 form#quote .box.upload label,form#quote .box.checkbank label{position:relative;padding-left:42px;}
 form#quote .box.upload label{display:block;margin-top:10px;margin-bottom:-10px;line-height:1.6em;}
-form#quote .box.upload .sprite,form#quote .box.checkbank .sprite{position:absolute;top:-3px;left:10px;background:url('../img/sp-icons.png') no-repeat scroll -243px -159px;width:19px;height:21px;}
+form#quote .box.upload .sprite,form#quote .box.checkbank .sprite{position:absolute;top:-3px;left:10px;width:19px;height:21px;}
 form#quote .box.checkbank .sprite{top:-1px;background-position:-262px -159px;width:22px;height:18px;}
 form#quote .box.upload .arrow,form#quote .box.checkbank .arrow{border-bottom:20px solid transparent;border-right:16px solid #287BAA;display:block;height:0;left:18px;position:absolute;bottom:-20px;width:0;}
 form#quote .checkbox,form#quote .radio{padding:3px 0;font-size:18pt;}
