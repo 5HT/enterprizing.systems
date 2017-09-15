@@ -134,14 +134,14 @@ body.page-sub #header {
   width: 179px;
   height: 79px;
   margin-top: 10px;
-  background: url(http://synrc.com/images/synrc-g14.svg) 0 0 no-repeat;
-  background-image: url("http://synrc.com/images/synrc-g14.svg");
+  background: url(//synrc.com/images/synrc-g14.svg) 0 0 no-repeat;
+  background-image: url("//synrc.com/images/synrc-g14.svg");
   background-size: 179px 59px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dppx), only screen and (min-resolution: 2dppx) {
   #footer .navbar-brand.logo span,
   #header .navbar-brand.logo span {
-    background-image: url("http://synrc.com/images/synrc-g14.svg");
+    background-image: url("//synrc.com/images/synrc-g14.svg");
     background-size: 179px 59px;
   }
 }
